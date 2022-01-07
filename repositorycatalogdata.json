@@ -1,0 +1,7 @@
+{
+  "description": "defaultbackend",
+  "architectures": ["x86"],
+  "operatingSystems": ["Linux"],
+  "aboutText": "A trivial http service that returns 501 Not Implemented for all requests except for health checks, which get 200 OK ",
+  "usageText": ""
+}
