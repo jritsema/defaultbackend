@@ -3,7 +3,7 @@ services:
   app:
     build: .
     platform: linux/amd64
-    image: public.ecr.aws/o8v1v2a2/defaultbackend:0.2.0
+    image: public.ecr.aws/jritsema/defaultbackend:0.2.1
     ports:
       - 80:8080
     environment:

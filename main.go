@@ -21,12 +21,12 @@ func main() {
 
 func startServer() {
 	port := getenv("PORT", "8080")
-	fmt.Printf("PORT = %v \n", port)
+	fmt.Println("PORT =", port)
 
 	hc := getenv("HEALTHCHECK", "/health")
-	fmt.Printf("HEALTHCHECK = %v \n", hc)
+	fmt.Println("HEALTHCHECK =", hc)
 
-	log.Printf("http server listening on %s \n", port)
+	log.Println("http server listening on", port)
 	http.HandleFunc(hc, func(w http.ResponseWriter, r *http.Request) {
 		io.WriteString(w, "")
 	})

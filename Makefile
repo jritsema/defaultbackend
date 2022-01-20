@@ -43,6 +43,12 @@ start: build
 dockerbuild: test
 	docker-compose build
 
+## login: login to ecr public
+.PHONY: login
+login:
+	aws ecr-public get-login-password --region us-east-1 | \
+		docker login --username AWS --password-stdin public.ecr.aws
+
 ## push: push container image to registry
 .PHONY: push 
 push: dockerbuild
